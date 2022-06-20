@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ {{>headerlinks}}
+
+</head>
+
+<body>
+
+{{>navbar}}
+
+    <div class="container-fluid main_header">
+
+            <div class="col-md-10 col-12 mx-auto">
+              
+     <div class="main-content">
+
+        <form class="temp_form">
+            <input type="text" name="" id="cityName" placeholder="Enter your cith name" autocomplete="off">
+        <input type="submit" value="search" id="submitBtn">
+        </form>
+     </div>
+
+<div class="tempInformation">
+    <div class="top_layer">
+        <p id="day">Tuesday</p>
+        <p id="data">13 OCT</p>
+    </div>
+
+    <div class="main_layer">
+
+<div class="middle_layer data_hide">
+    <p id="city_name">Get Output Here</p>
+    <p id="temp"><span id="temp_rel_value">0</span><sup>o</sup>C</p>
+    <p id="temp_status"><i class="fa fa-cloud"></i></p>
+</div>
+
+
+    </div>
+</div>
+
+                    </div>
+
+                
+                </div>
+
+      
+
+
+   {{>footer}}
+   <script src="js/main.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+
+const getCurrentDay=()=>{
+
+    let weekDay=new Array(7);
+    weekDay[0]="Sunday";
+    weekDay[1]="Monday";
+    weekDay[2]="Tuesday";
+    weekDay[3]="WednesDay";
+    weekDay[4]="Thursday";
+    weekDay[5]="Friday";
+    weekDay[6]="Staurday";
+
+
+let currentTime=new Date();
+ days=weekDay[currentTime.getDay()];
+let day=document.getElementById('day')
+day.innerText=days;
+
+return day
+
+}
+
+getCurrentDay();
+
+
+
+</script>
+
+</body>
+
+</html>
